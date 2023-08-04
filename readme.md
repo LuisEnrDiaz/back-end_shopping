@@ -11,6 +11,8 @@ Shopping back-end
 ![tecnologias](https://img.shields.io/badge/TypeScript-white?logo=typescript)
 ![tecnologias](https://img.shields.io/badge/MongoDB-white.svg?logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGNsYXNzPSJpY29uIGljb24tdGFibGVyIGljb24tdGFibGVyLWJyYW5kLW1vbmdvZGIiIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZT0iY3VycmVudENvbG9yIiBmaWxsPSJub25lIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPjxwYXRoIHN0cm9rZT0ibm9uZSIgZD0iTTAgMGgyNHYyNEgweiIgZmlsbD0ibm9uZSI+PC9wYXRoPjxwYXRoIGQ9Ik0xMiAzdjE5Ij48L3BhdGg+PHBhdGggZD0iTTE4IDExLjIyN2MwIDMuMjczIC0xLjgxMiA0Ljc3IC02IDkuMjczYy00LjE4OCAtNC41MDMgLTYgLTYgLTYgLTkuMjczYzAgLTQuNDU0IDMuMDcxIC02LjkyNyA2IC05LjIyN2MyLjkyOSAyLjMgNiA0Ljc3MyA2IDkuMjI3eiI+PC9wYXRoPjwvc3ZnPg==)
 
+Puedes ver informacion util (solo visual) en este link: [Solo tienes que dar clic aqui]([https://midgard-digital.netlify.app/](https://back-end-shopping.netlify.app/))
+
 ## Instalación
 
     1  Clona este proyecto.
