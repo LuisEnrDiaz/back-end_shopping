@@ -28,7 +28,7 @@ cartRoutes.patch(
 );
 
 cartRoutes.patch(
-    '/removeAllProduct',
+    '/removeAllProducts',
     logged,
     cartController.removeAllProductCart.bind(cartController)
 );
