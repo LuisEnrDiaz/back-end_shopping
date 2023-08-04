@@ -1,0 +1,440 @@
+:root {
+    --background-body: #ffffff;
+    --headline: #1f1235;
+    --sub-headline: #1b1425;
+    --button: #ff6e6c;
+    --button-text: #1f1235;
+
+    --stroke: #1f1235;
+    --main: #ffffff;
+    --highlight: #ff6e6c;
+    --secondary: #67568c;
+    --tertiary: #fbdd74;
+
+    --background-element: #f4effc;
+    --sub-headline-element: #1b1325;
+    --background-card: #e2daeb;
+
+    --ok: #2cb67d;
+    --error: #f45d48;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    vertical-align: baseline;
+}
+
+/* Evitamos problemas con las imagenes */
+img,
+picture,
+video,
+iframe,
+figure {
+    max-width: 100%;
+    width: 100%;
+    display: block;
+    /* opcional */
+    -o-object-fit: cover;
+    object-fit: cover;
+    /* opcional */
+    -o-object-position: center center;
+    object-position: center center;
+}
+
+/* Reseteamos los enlaces para funcionar como cajas... */
+a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    font-size: inherit;
+}
+
+/* ... excepto los que se encuentran en párrafos */
+p a {
+    display: inline;
+}
+
+/* Quitamos los puntos de los <li> */
+li {
+    list-style-type: none;
+}
+
+/* Configuramos anclas suaves */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Desactivamos estilos por defecto de las principales etiquetas de texto */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+a,
+strong,
+blockquote,
+i,
+b,
+u,
+em {
+    font-size: 1em;
+    font-weight: inherit;
+    font-style: inherit;
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Evitamos problemas con los pseudoelementos de quotes */
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+/* Configuramos el texto que seleccionamos */
+::-moz-selection {
+    background-color: var(--button);
+    color: var(--background-body);
+}
+::selection {
+    background-color: var(--button);
+    color: var(--background-body);
+}
+
+/* Nivelamos problemas de tipografías y colocación de formularios */
+form,
+input,
+textarea,
+select,
+button,
+label {
+    font-family: inherit;
+    font-size: inherit;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+    background-color: transparent;
+    color: inherit;
+    display: block;
+    /* opcional */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+/* Reseteamos las tablas */
+table,
+tr,
+td {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* Evitamos problemas con los SVG */
+svg {
+    width: 100%;
+    display: block;
+}
+
+/* (Probándolo, no usar en producción) En el caso de añadir una  */
+/* p svg{
+display: inline;
+width: initial;
+} */
+/* Configuramos la tipografía para toda la web */
+body {
+    min-height: 100vh;
+    font-size: 100%;
+    font-family: 'Rubik', sans-serif;
+    background-color: var(--background-body);
+}
+
+.background {
+    background-image: url(./assets/background.svg);
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.background-footer {
+    background-image: url(./assets/background-footer.svg);
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media (min-width: 375px) {
+    header {
+        width: 100%;
+        height: 4em;
+        background-color: #ff6e6c;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding: 0 1em;
+        position: sticky;
+        top: 0;
+        z-index: 50;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+
+    nav {
+        display: flex;
+        gap: 1em;
+        text-transform: uppercase;
+        font-size: medium;
+        font-weight: 600;
+        color: var(--headline);
+    }
+
+    img {
+        width: 3em;
+    }
+
+    p {
+        color: var(--sub-headline);
+        font-size: 17px;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+
+    h1 {
+        font-size: x-large;
+        font-weight: 800;
+        color: var(--headline);
+        text-transform: capitalize;
+    }
+
+    h2 {
+        font-size: 20px;
+        font-weight: 600;
+        color: var(--sub-headline);
+        text-transform: lowercase;
+    }
+
+    h3 {
+        font-size: 18px;
+        font-weight: 600;
+        color: var(--headline);
+    }
+
+    .details {
+        display: flex;
+        align-items: center;
+    }
+
+    .details pre {
+        background-color: var(--tertiary);
+        width: 20em;
+        border-radius: 24px;
+        margin: 1em;
+        color: #1b1325;
+    }
+
+    .container-routes {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        width: 100%;
+        gap: 1em;
+        min-height: 100vh;
+        height: auto;
+    }
+
+    .container {
+        position: relative;
+        padding: 0.5em;
+        background-color: var(--background-card);
+        border-radius: 24px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        width: 100%;
+    }
+
+    .container.active .content {
+        height: auto;
+        opacity: 1;
+    }
+
+    .label {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        cursor: pointer;
+        position: relative;
+        margin: 0 10px;
+        text-transform: capitalize;
+    }
+
+    .container.active .label::before {
+        content: '-';
+        font-size: 25px;
+    }
+
+    .label::before {
+        content: '+';
+        color: black;
+        position: absolute;
+        top: 50%;
+        right: -5px;
+        font-size: 25px;
+        transform: translateY(-50%);
+    }
+
+    .content {
+        position: relative;
+        overflow: hidden;
+        transition: 1s;
+        height: 0;
+        opacity: 0;
+    }
+
+    .sub-title {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        gap: 1em;
+    }
+
+    .information {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        text-transform: uppercase;
+        padding: 0.3em 1.5em;
+    }
+
+    .green {
+        color: green;
+        font-weight: 800;
+    }
+
+    .red {
+        color: rgb(253, 66, 66);
+        font-weight: 800;
+    }
+
+    .purple {
+        color: rgb(175, 36, 175);
+        font-weight: 800;
+    }
+
+    .yellow {
+        color: rgb(255, 153, 0);
+        font-weight: 800;
+    }
+
+    .title {
+        margin: 3em 1em;
+        display: flex;
+        align-items: center;
+    }
+
+    .svg {
+        width: 3em;
+        stroke: var(--stroke);
+        stroke-width: 2px;
+        fill: var(--highlight);
+    }
+
+    .socials {
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+
+    .socials svg {
+        stroke: var(--stroke);
+        stroke-width: 2px;
+        fill: var(--highlight);
+        width: 1.5em;
+    }
+
+    .socials a {
+        display: flex;
+        align-items: center;
+        height: 2em;
+        gap: 0.3em;
+    }
+
+    span {
+        color: var(--secondary);
+    }
+
+    .response {
+        background-color: var(--ok);
+        border-radius: 14px;
+        margin: 1em;
+        max-width: 50em;
+        width: auto;
+    }
+
+    pre {
+        padding: 0.5em;
+        page-break-inside: avoid;
+        line-height: 1.5;
+        word-wrap: break-word;
+        overflow-x: auto;
+        font-size: 16px;
+        font-weight: 600;
+        font-family: monospace;
+        color: var(--main);
+    }
+
+    .footer {
+        display: grid;
+        place-content: center;
+        place-items: center;
+        background-color: var(--highlight);
+        height: 5em;
+        text-transform: capitalize;
+        gap: 0.5em;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container-routes {
+        align-items: center;
+    }
+
+    .container {
+        width: 70em;
+    }
+
+    .label {
+        flex-direction: row;
+        justify-content: start;
+        padding: 0 1em;
+        height: 3em;
+        gap: 2em;
+    }
+
+    .container.active .label::before {
+        font-size: 30px;
+    }
+
+    .label::before {
+        font-size: 30px;
+    }
+
+    .content {
+        padding: 0.5em;
+    }
+
+    .information {
+        justify-content: start;
+        gap: 1em;
+    }
+}
