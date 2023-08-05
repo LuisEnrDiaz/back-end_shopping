@@ -9,7 +9,12 @@ export type ProductI = {
     details: string;
     price: number;
     stoke: number;
+    categories: Categories;
+    color: string;
+    offer: boolean;
 };
+
+Categories: 'shoes' | 'shirts' | 't-shirts' | 'jeans'
 
 export type ProtoProductI = {
     image: string;
@@ -17,6 +22,9 @@ export type ProtoProductI = {
     details: string;
     price: number;
     stoke: number;
+    categories: Categories;
+    color: string;
+    offer: boolean
 };
 
 export const productSchema = new Schema<ProductI>({
@@ -25,6 +33,9 @@ export const productSchema = new Schema<ProductI>({
     details: { type: String, required: true },
     price: { type: Number, required: true },
     stoke: { type: Number, required: true },
+    categories: { type: String, required:      true},
+    color: { type: String, required: true},
+    offer: { type: Boolean, required: true},
 });
 
 setToJson(productSchema);
