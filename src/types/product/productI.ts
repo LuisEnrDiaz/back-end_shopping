@@ -8,20 +8,23 @@ export type ProductI = {
     name: string;
     details: string;
     price: number;
-    stoke: number;
+    stock: number;
     categories: Categories;
     color: string;
     offer: boolean;
+    season: Season;
 };
 
-Categories: 'shoes' | 'shirts' | 't-shirts' | 'jeans'
+Season: 'winter' | 'spring' | 'summer'| 'autumn';
+
+Categories: 'shoes' | 'shirts' | 't-shirts' | 'jeans';
 
 export type ProtoProductI = {
     image: string;
     name: string;
     details: string;
     price: number;
-    stoke: number;
+    stock: number;
     categories: Categories;
     color: string;
     offer: boolean
@@ -32,7 +35,7 @@ export const productSchema = new Schema<ProductI>({
     name: { type: String, required: true },
     details: { type: String, required: true },
     price: { type: Number, required: true },
-    stoke: { type: Number, required: true },
+    stock: { type: Number, required: true },
     categories: { type: String, required:      true},
     color: { type: String, required: true},
     offer: { type: Boolean, required: true},
